@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import day1 from "./day1b.js";
+import day from "./day2b.js";
 import "./App.css";
 
 interface State {
@@ -9,7 +9,7 @@ interface State {
 
 class App extends Component<{}, State> {
   state: State = {
-    input: "q",
+    input: "",
     output: "Output will be here"
   };
 
@@ -24,7 +24,7 @@ class App extends Component<{}, State> {
         />
         <button
           onClick={event => {
-            this.setState({ output: day1(this.state.input) });
+            this.setState({ output: day(this.state.input) });
           }}
         >
           Process Input
