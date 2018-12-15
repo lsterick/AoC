@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import day from "./day2b.js";
+import day from "./day10.js";
 import "./App.css";
 
 interface State {
@@ -29,7 +29,7 @@ class App extends Component<{}, State> {
         >
           Process Input
         </button>
-        <p>{this.state.output}</p>
+        <pre>{this.state.output}</pre>
       </div>
     );
   }
