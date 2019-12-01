@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import day from "./day1a.js";
+import day from "./day1.js";
 import "./App.css";
 
 interface State {
