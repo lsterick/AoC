@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import day from "./day8b";
+import day from "./day1";
 import "./App.css";
 
 interface State {
@@ -10,7 +10,7 @@ interface State {
 class App extends Component<{}, State> {
   state: State = {
     input: "",
-    output: "Output will be here"
+    output: "Output will be here",
   };
 
   render() {
@@ -18,12 +18,12 @@ class App extends Component<{}, State> {
       <div className="App">
         <textarea
           value={this.state.input}
-          onChange={event => {
+          onChange={(event) => {
             this.setState({ input: event.target.value });
           }}
         />
         <button
-          onClick={event => {
+          onClick={(event) => {
             this.setState({ output: day(this.state.input) });
           }}
         >
