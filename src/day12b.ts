@@ -1,27 +1,26 @@
 function right90 (waypointX:number, waypointY:number, x:number, y:number): Array<number> {
-  let newX = x - (y - waypointY);
-  let newY = y - (x - waypointX);
+  let newX = waypointY;
+  let newY = -waypointX;
 
   return [newX, newY];
 }
 
 function turn180 (waypointX:number, waypointY:number, x:number, y:number): Array<number> {
-  let newX = waypointX - 2*(waypointX - x);
-  let newY = waypointY - 2*(waypointY - y);
+  let newX = waypointX - 2*(waypointX);
+  let newY = waypointY - 2*(waypointY);
 
   return [newX, newY];
 }
 
 function left90 (waypointX:number, waypointY:number, x:number, y:number): Array<number> {
-  let newX = x + (y - waypointY);
-  let newY = y + (x - waypointX);
+  let newX = -waypointY;
+  let newY = waypointX;
 
   return [newX, newY];
 }
 
 export default function (input: string): string {
   const instructions: Array<{action: string, value: number}> = input.split("\n").map((line) => {return {action: line.slice(0, 1), value: parseInt(line.slice(1))}});
-  let currentDirection = 90;
   let x = 0;
   let y = 0;
   let waypointX = 10;
@@ -70,13 +69,9 @@ export default function (input: string): string {
         break;
 
       case "F":
-        // This bit's messed up
-        const oldX = x;
-        const oldY = y;
-        x += ((oldX-waypointX) * instructions[i].value);
-        y += ((oldY - waypointY) * instructions[i].value);
-        waypointX = x + (oldX - waypointX);
-        waypointY = y + (oldY - waypointY);
+
+        x += ((waypointX) * instructions[i].value);
+        y += ((waypointY) * instructions[i].value);
         break;
       
       default:
