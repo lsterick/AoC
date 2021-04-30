@@ -1,7 +1,24 @@
-[
-    {"type":"departure location",
-    "possibleFieldIndex":[false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],
-    "range1start":45,"range1end":609,"range2start":616,"range2end":954
-    },{"type":"departure station",
-    "possibleFieldIndex":[true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],
-    "range1start":32,"range1end":194,"range2start":211,"range2end":972},{"type":"departure platform","possibleFieldIndex":[true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"range1start":35,"range1end":732,"range2start":744,"range2end":970},{"type":"departure track","possibleFieldIndex":[true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"range1start":40,"range1end":626,"range2start":651,"range2end":952},{"type":"departure date","possibleFieldIndex":[true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"range1start":44,"range1end":170,"range2start":184,"range2end":962},{"type":"departure time","possibleFieldIndex":[true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"range1start":49,"range1end":528,"range2start":538,"range2end":954},{"type":"arrival location","possibleFieldIndex":[true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true,true],"range1start":36,"range1end":448,"range2start":464,"range2end":956},{"type":"arrival station","possibleFieldIndex":[true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true,true],"range1start":48,"range1end":356,"range2start":373,"range2end":972},{"type":"arrival platform","possibleFieldIndex":[true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true,true],"range1start":25,"range1end":118,"range2start":132,"range2end":954},{"type":"arrival track","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true,true],"range1start":43,"range1end":703,"range2start":719,"range2end":965},{"type":"class","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true,true],"range1start":29,"range1end":822,"range2start":828,"range2end":961},{"type":"duration","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true,true],"range1start":25,"range1end":131,"range2start":151,"range2end":967},{"type":"price","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true,true],"range1start":44,"range1end":784,"range2start":794,"range2end":958},{"type":"route","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true,true],"range1start":25,"range1end":498,"range2start":511,"range2end":951},{"type":"row","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true,true],"range1start":44,"range1end":905,"range2start":916,"range2end":973},{"type":"seat","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true,true],"range1start":26,"range1end":756,"range2start":777,"range2end":960},{"type":"train","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true,true],"range1start":36,"range1end":803,"range2start":819,"range2end":954},{"type":"type","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false,true,true],"range1start":33,"range1end":318,"range2start":335,"range2end":967},{"type":"wagon","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"range1start":46,"range1end":558,"range2start":570,"range2end":969},{"type":"zone","possibleFieldIndex":[true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,false],"range1start":47,"range1end":249,"range2start":265,"range2end":972}]
+.#.#..#.##...#.##..#####
+###....#.#....#..#......
+##.##.###.#.#..######...
+###.#####...#.#####.#..#
+##.#....#.##.####...#.##
+...########.#....#####.#
+....#..#...##..#.#.###..
+.####...#..#.....#......
+#..#.##..#..###.#.##....
+#.####..#.####.#.#.###..
+###.#.#...#.######.#..##
+#.####....##..########.#
+##..##.#...#...#.#.#.#..
+...#..#..#.#.##..###.###
+.#.#....#.##.#...###.##.
+###.#...#..#.##.######..
+.#.#.###.##.##.#..#.##..
+.####.###.#...###.#..#.#
+..#.#..#..#.#.#.####.###
+#..####...#.#.#.###.###.
+#####..#####...###....##
+#.##..#..#...#..####...#
+.#.###..##..##..####.##.
+...###...##...#...#..###
