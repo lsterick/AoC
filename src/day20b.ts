@@ -3,8 +3,8 @@ function arranger(
     tiles: {[key: string]: {edges: Array<string>, innerGrid: Array<Array<string>>, placed: boolean}}, 
     iStart: number, 
     jStart: number) {
-    for(let i = iStart; i < 3; i++){// was 12
-        for(let j = jStart; j < 3; j++){// was 12
+    for(let i = iStart; i < 12; i++){// was 12
+        for(let j = jStart; j < 12; j++){// was 12
             if(i !== 0 || j !== 0){
                 for(let tile in tiles){
                     if(!tiles[tile].placed){
@@ -20,14 +20,14 @@ function arranger(
                                 if(tiles[tile].edges[k] === tiles[finishedGridOrder[i - 1][j]].edges[2]){
                                     newTop = k;
                                     matchTop = true;
-                                    if(k === 2){
+                                    if(k === 2 || k === 3){
                                         flipHoriz = true;
                                     }
                                     break;
                                 } else if(tiles[tile].edges[k].split('').reverse().join('') === tiles[finishedGridOrder[i - 1][j]].edges[2]){
                                     // check flipped 
                                     newTop = k;
-                                    if(k !== 2){
+                                    if(k !== 2 && k !== 3){
                                         flipHoriz = true
                                     }
                                     matchTop = true;
@@ -44,7 +44,7 @@ function arranger(
                                     if(tiles[tile].edges[k] === tiles[finishedGridOrder[i][j - 1]].edges[1]){
                                         newTop = (k - 3 + 4) % 4;
                                         matchLeft = true;
-                                        if(k === 1){
+                                        if(k === 1 || k === 0){
                                             flipVert = true;
                                         }
                                         break;
@@ -52,7 +52,7 @@ function arranger(
                                         // check flipped 
                                         newTop = (k - 3 + 4) % 4;
                                         matchLeft = true;
-                                        if(k !== 1){
+                                        if(k !== 1 && k !== 0){
                                             flipVert = true;
                                         }
                                         break;
@@ -245,20 +245,21 @@ export default function (input: string): string {
         }
     };
 
-    let finishedGridOrder: Array<Array<number>> = [[1951, -1, -1]];//, -1, -1, -1, -1, -1, -1, -1, -1, -1]] // was 2251
-    for(let q = 1; q < 3; q++){ // was 12
-        finishedGridOrder.push([-1, -1, -1]);//, -1, -1, -1, -1, -1, -1, -1, -1, -1])
+    let finishedGridOrder: Array<Array<number>> = [[2251, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]] // was 2251
+    for(let q = 1; q < 12; q++){ // was 12
+        finishedGridOrder.push([-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1])
     }
 
-    const oldTileTopCorner = JSON.parse(JSON.stringify(tiles[1951]))
-    tiles[1951].placed = true; // was 2251
-    const newTopCorner = 0
-    tiles[1951].edges[0] = oldTileTopCorner.edges[(newTopCorner + 2) % 4];
-    tiles[1951].edges[1] = oldTileTopCorner.edges[(newTopCorner + 1) % 4].split('').reverse().join('');
-    tiles[1951].edges[2] = oldTileTopCorner.edges[(newTopCorner)];
-    tiles[1951].edges[3] = oldTileTopCorner.edges[(newTopCorner + 3) % 4].split('').reverse().join('');
-
-    tiles[1951].innerGrid = oldTileTopCorner.innerGrid.reverse()
+    const oldTileTopCorner = JSON.parse(JSON.stringify(tiles[2251]))
+    tiles[2251].placed = true; // was 2251
+    const oldTile = JSON.parse(JSON.stringify(tiles[2251]))
+    for(let x = 0; x < oldTile.innerGrid.length; x++){
+        tiles[2251].innerGrid[x].reverse()
+    }
+    tiles[2251].innerGrid.reverse()
+    for(let e = 0; e < oldTile.edges.length; e++){
+        tiles[2251].edges[e] = oldTile.edges[(e + 2) % 4].split('').reverse().join('');
+    }
 
     arranger(finishedGridOrder, tiles, 0, 0)
 
